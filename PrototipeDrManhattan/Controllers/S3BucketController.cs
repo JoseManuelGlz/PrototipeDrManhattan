@@ -63,5 +63,21 @@ namespace S3TestWebApi.Controllers
             var response = _service.GeneratePreSignedURL(bucketName,bucketName);
             return Ok(response);
         }
+
+        [HttpGet("validateFile")]
+        public IActionResult validateFile([FromForm] IFormFile file)
+        {
+            if (file != null)
+            {
+
+                using (var reader = new StreamReader(file.OpenReadStream()))
+                {
+                    var s = reader.BaseStream;
+                    var response = _service.validateFile(file.ContentType, s);
+                    return Ok(response);
+                }
+            }
+            return Ok();
+        }
     }
 }
