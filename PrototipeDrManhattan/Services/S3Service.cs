@@ -258,8 +258,94 @@ namespace S3TestWebApi.Services
                     }
                     
                     break;
+                case "application/msword":
+                    bool isdoc = IsDocFile(file);
+
+                    if (isdoc)
+                    {
+                        return "doc";
+                    }
+
+                    return "doc no valido";
+
+                    break;
+                case "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
+                    bool isdocx = IsDocFile(file);
+
+                    if (isdocx)
+                    {
+                        return "docx";
+                    }
+
+                    return "docx no valido";
+
+                    break;
+                    
             }
             return "No es un archivo valido";
+        }
+
+        private bool IsDocFile(Stream file)
+        {
+            bool isDocFile = false;
+            //
+            // File sigs from: http://www.garykessler.net/library/file_sigs.html
+            //
+            string msOfficeHeader = "D0-CF-11-E0-A1-B1-1A-E1";
+            string docSubHeader = "EC-A5-C1-00";
+
+            //get file header
+            byte[] headerBuffer = new byte[8];
+            file.Read(headerBuffer, 0, headerBuffer.Length);
+            string headerString = BitConverter.ToString(headerBuffer);
+
+            if (headerString.Equals(msOfficeHeader, StringComparison.InvariantCultureIgnoreCase))
+            {
+                //get subheader
+                byte[] subHeaderBuffer = new byte[4];
+                file.Seek(512, SeekOrigin.Begin);
+                file.Read(subHeaderBuffer, 0, subHeaderBuffer.Length);
+                string subHeaderString = BitConverter.ToString(subHeaderBuffer);
+
+                if (subHeaderString.Equals(docSubHeader, StringComparison.InvariantCultureIgnoreCase))
+                {
+                    isDocFile = true;
+                }
+            }
+            
+            return isDocFile;
+        }
+
+        private bool IsDocxFile(Stream file)
+        {
+            bool isDocFile = false;
+            //
+            // File sigs from: http://www.garykessler.net/library/file_sigs.html
+            //
+            string msOfficeHeader = "50-4B-03-04-14-00-08-08";
+            string msOfficeHeadeR = "50-4B-03-04-14-00-06-00";
+            string docSubHeader = "EC-A5-C1-00";
+
+            //get file header
+            byte[] headerBuffer = new byte[8];
+            file.Read(headerBuffer, 0, headerBuffer.Length);
+            string headerString = BitConverter.ToString(headerBuffer);
+
+            if (headerString.Equals(msOfficeHeader, StringComparison.InvariantCultureIgnoreCase))
+            {
+                //get subheader
+                byte[] subHeaderBuffer = new byte[4];
+                file.Seek(512, SeekOrigin.Begin);
+                file.Read(subHeaderBuffer, 0, subHeaderBuffer.Length);
+                string subHeaderString = BitConverter.ToString(subHeaderBuffer);
+
+                if (subHeaderString.Equals(docSubHeader, StringComparison.InvariantCultureIgnoreCase))
+                {
+                    isDocFile = true;
+                }
+            }
+            
+            return isDocFile;
         }
     }
 }
