@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="Implementation\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Documents.Manager.Models\Documents.Manager.Models.csproj" />
+    <ProjectReference Include="..\Documents.Manager.DataAccess\Documents.Manager.DataAccess.csproj" />
+  </ItemGroup>
+</Project>

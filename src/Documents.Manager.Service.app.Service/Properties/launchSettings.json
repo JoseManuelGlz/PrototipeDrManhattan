@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:6001",
+      "sslPort": 44380
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "Documents.Manager.Service": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "BUS_ENABLED": "1",
+        "CONNECTION": "Host=localhost;Port=5432;Username=root;Password=root;Database=docuemnts;",
+        "AWS_SECRETS_MANAGER_REGION": "us-east-1",
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "AWS_SECRETS_MANAGER_NAME": "DocumentsManager/sandbox"
+      },
+      "applicationUrl": "https://localhost:6001;http://localhost:6000"
+    }
+  }
+}
