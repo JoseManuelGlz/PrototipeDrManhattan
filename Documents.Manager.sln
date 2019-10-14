@@ -25,7 +25,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Documents.Manager.Business"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Documents.Manager.DataAccess", "src\Documents.Manager.DataAccess\Documents.Manager.DataAccess.csproj", "{B45F164D-6238-42BE-9C11-EBAC34E394D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Documents.Manager.Service", "src\Documents.Manager.Service.app.Service\Documents.Manager.Service.csproj", "{F128284D-95F8-459E-93F6-7A27F70D5A22}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Documents.Manager.Service", "src\Documents.Manager.Service\Documents.Manager.Service.csproj", "{F128284D-95F8-459E-93F6-7A27F70D5A22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
