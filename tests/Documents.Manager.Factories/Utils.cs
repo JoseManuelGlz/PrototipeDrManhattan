@@ -117,6 +117,21 @@ namespace Documents.Manager.Factories
         }
 
         /// <summary>
+        /// Get the long
+        /// </summary>
+        /// <param name="numberA">number A</param>
+        /// <param name="numberB">number B</param>
+        /// <returns>Double</returns>
+        public static long GetLong(int numberA, int numberB)
+        {
+            var fraction = (int)Math.Floor(Math.Log10(numberB)) + 1;
+            var divider = Math.Pow(10, fraction);
+
+
+            return (long)(numberA + (numberB / divider));
+        }
+
+        /// <summary>
         /// Gets the json b.
         /// </summary>
         /// <returns>The json b.</returns>

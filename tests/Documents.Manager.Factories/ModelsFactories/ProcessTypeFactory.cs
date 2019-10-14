@@ -28,16 +28,7 @@ namespace Documents.Manager.Factories.ModelsFactories
             var name = Utils.GetAlphaNumericString(MAX_LENGTH);
             var description = Utils.GetAlphaNumericString(MAX_LENGTH);
 
-            return new ProcessType();
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        public static ProcessType GetProcessTypeEmpty()
-        {
-            return new ProcessType();
+            return new ProcessType(id, name, description);
         }
 
         /// <summary>
@@ -50,7 +41,7 @@ namespace Documents.Manager.Factories.ModelsFactories
             var name = Utils.GetAlphaNumericString(MAX_LENGTH);
             var description = Utils.GetAlphaNumericString(MAX_LENGTH);
 
-            return new ProcessType();
+            return new ProcessType(id, name, description);
         }
 
         /// <summary>
@@ -64,7 +55,7 @@ namespace Documents.Manager.Factories.ModelsFactories
             var name = Utils.GetAlphaNumericString(length);
             var description = Utils.GetAlphaNumericString(length);
 
-            return new ProcessType();
+            return new ProcessType(id, name, description);
         }
 
         #endregion

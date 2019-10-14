@@ -27,17 +27,8 @@ namespace Documents.Manager.Factories
             var id = Guid.NewGuid();
             var name = Utils.GetAlphaNumericString(MAX_LENGTH);
             var description = Utils.GetAlphaNumericString(MAX_LENGTH);
-            
-            return new Application();
-        }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        public static Application GetApplicationEmpty()
-        {
-            return new Application();
+            return new Application(id, name, description);
         }
 
         /// <summary>
@@ -50,7 +41,7 @@ namespace Documents.Manager.Factories
             var name = Utils.GetAlphaNumericString(MAX_LENGTH);
             var description = Utils.GetAlphaNumericString(MAX_LENGTH);
 
-            return new Application();
+            return new Application(id, name, description);
         }
 
         /// <summary>
@@ -64,7 +55,7 @@ namespace Documents.Manager.Factories
             var name = Utils.GetAlphaNumericString(length);
             var description = Utils.GetAlphaNumericString(length);
 
-            return new Application();
+            return new Application(id, name, description);
         }
 
         #endregion

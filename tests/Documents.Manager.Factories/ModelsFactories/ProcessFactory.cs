@@ -18,11 +18,49 @@ namespace Documents.Manager.Factories.ModelsFactories
 
         #region :: Methods ::
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public static Process GetProcess()
         {
-            return new Process(); 
+            var id = Guid.NewGuid();
+            var name = Utils.GetAlphaNumericString(MAX_LENGTH);
+            var description = Utils.GetAlphaNumericString(MAX_LENGTH);
+            var nameBucket = Utils.GetAlphaNumericString(MAX_LENGTH);
+            var proccessTypeId = Guid.NewGuid();
+
+            return new Process(id, name, description, nameBucket, proccessTypeId);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public static Process GetProcess(Guid id)
+        {
+            var name = Utils.GetAlphaNumericString(MAX_LENGTH);
+            var description = Utils.GetAlphaNumericString(MAX_LENGTH);
+            var nameBucket = Utils.GetAlphaNumericString(MAX_LENGTH);
+            var proccessTypeId = Guid.NewGuid();
+
+            return new Process(id, name, description, nameBucket, proccessTypeId);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public static Process GetProcess(int length)
+        {
+            var id = Guid.NewGuid();
+            var name = Utils.GetAlphaNumericString(length);
+            var description = Utils.GetAlphaNumericString(length);
+            var nameBucket = Utils.GetAlphaNumericString(length);
+            var proccessTypeId = Guid.NewGuid();
+
+            return new Process(id, name, description, nameBucket, proccessTypeId);
+        }
         #endregion
     }
 }

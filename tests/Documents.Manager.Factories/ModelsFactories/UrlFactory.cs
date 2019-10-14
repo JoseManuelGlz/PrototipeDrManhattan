@@ -24,23 +24,41 @@ namespace Documents.Manager.Factories.ModelsFactories
         /// <summary>
         /// Get valid <see cref="T:Documents.Manager.Models..Models.Url"/> with an identifier.
         /// </summary>
-        /// <param name="userId">User identifier.</param>
         /// <returns>New <see cref="T:Documents.Manager.Models..Models.Url"/></returns>
-        public static Url GetValid()
+        public static Url GetUrl()
         {
-            return new Url();
+            Guid id = Guid.NewGuid();
+            var address = Utils.GetAlphaNumericString(MAX_LENGTH);
+            var expiresAt = DateTime.Now;
+            Guid fileId = Guid.NewGuid();
+            return new Url(id, address, expiresAt, fileId);
+        }
+
+        /// <summary>
+        /// Get valid <see cref="T:Documents.Manager.Models..Models.Url"/> with an identifier.
+        /// </summary>
+        /// <returns>New <see cref="T:Documents.Manager.Models..Models.Url"/></returns>
+        public static Url GetUrlWithId(Guid id)
+        {
+            var address = Utils.GetAlphaNumericString(MAX_LENGTH);
+            var expiresAt = DateTime.Now;
+            Guid fileId = Guid.NewGuid();
+            return new Url(id, address, expiresAt, fileId);
         }
 
         /// <summary>
         /// Get an invalid <see cref="T:Documents.Manager.Models.Models.Url"/> with fields longer than the specified length.
         /// </summary>
-        /// <param name="userId">Identifier</param>
+        /// <param name="length"></param>
         /// <returns>New <see cref="T:Documents.Manager.Models.Models.Url"/></returns>
-        public static Url GetAddedInvalidMaxLength(Guid userId, int length)
+        public static Url GetAddedInvalidMaxLength(int length)
         {
-            return new Url();
+            Guid id = Guid.NewGuid();
+            var address = Utils.GetAlphaNumericString(length);
+            var expiresAt = DateTime.Now;
+            Guid fileId = Guid.NewGuid();
+            return new Url(id, address, expiresAt, fileId);
         }
-
         
         #endregion
     }

@@ -28,16 +28,7 @@ namespace Documents.Manager.Factories.ModelsFactories
             var name = Utils.GetAlphaNumericString(MAX_LENGTH);
             var description = Utils.GetAlphaNumericString(MAX_LENGTH);
 
-            return new FileClassification();
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        public static FileClassification GetFileClassificationEmpty()
-        {
-            return new FileClassification();
+            return new FileClassification(id, name, description);
         }
 
         /// <summary>
@@ -50,7 +41,7 @@ namespace Documents.Manager.Factories.ModelsFactories
             var name = Utils.GetAlphaNumericString(MAX_LENGTH);
             var description = Utils.GetAlphaNumericString(MAX_LENGTH);
 
-            return new FileClassification();
+            return new FileClassification(id, name, description);
         }
 
         /// <summary>
@@ -64,7 +55,7 @@ namespace Documents.Manager.Factories.ModelsFactories
             var name = Utils.GetAlphaNumericString(length);
             var description = Utils.GetAlphaNumericString(length);
 
-            return new FileClassification();
+            return new FileClassification(id, name, description);
         }
 
         #endregion

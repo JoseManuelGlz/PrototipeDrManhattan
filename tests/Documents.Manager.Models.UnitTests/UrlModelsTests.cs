@@ -19,7 +19,7 @@ namespace Documents.Manager.Models.UnitTests
         [Fact]
         public static void Should_Be_ok()
         {
-            Url url = UrlFactory.GetValid();
+            Url url = UrlFactory.GetUrl();
             var result = ModelValidation.GetValidationResults(url);
 
             Assert.True(result.Passed);
