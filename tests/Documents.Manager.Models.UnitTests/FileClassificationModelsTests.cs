@@ -11,6 +11,8 @@ namespace Documents.Manager.Models.UnitTests
     [Collection("Sequential")]
     public static class FileClassificationModelTests
     {
+        #region :: Methods ::
+
         /// <summary>
         /// Should be ok
         /// </summary>
@@ -23,5 +25,6 @@ namespace Documents.Manager.Models.UnitTests
             Assert.True(res.Passed);
         }
 
+        #endregion
     }
 }

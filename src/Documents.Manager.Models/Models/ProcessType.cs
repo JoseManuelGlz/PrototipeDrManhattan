@@ -69,15 +69,24 @@ namespace Documents.Manager.Models.Models
         #region :: Constructors ::
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Documents.Manager.Models.ProcessType"/> class.
+        /// Initializes a new instance of the <see cref="T:Documents.Manager.Models.Models.ProcessType"/> class.
         /// </summary>
         public ProcessType()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Documents.Manager.Models.ProcessType"/> class.
+        /// Initializes a new instance of the <see cref="T:Documents.Manager.Models.Models.ProcessType"/> class.
         /// </summary>
+        /// <param name="id"></param>
+        /// <param name="name"></param>
+        /// <param name="description"></param>
+        public ProcessType(Guid id, string name, string description)
+        {
+            Id = id;
+            Name = name;
+            Description = description;
+        }
 
         #endregion
     }

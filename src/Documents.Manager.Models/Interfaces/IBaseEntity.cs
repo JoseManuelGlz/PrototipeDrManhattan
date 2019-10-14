@@ -25,7 +25,7 @@ namespace Documents.Manager.Models.Interfaces
         DateTime? UpdatedAt { get; set; }
 
         /// <summary>
-        /// Gets a value indicating whether this <see cref="T:Onboarding.Catalogs.Models.BaseEntity"/> is deleted.
+        /// Gets a value indicating whether this <see cref="T:Onboarding.Catalogs.Models.Interfaces.BaseEntity"/> is deleted.
         /// </summary>
         /// <value><c>true</c> if is deleted; otherwise, <c>false</c>.</value>
         bool IsDeleted { get; }

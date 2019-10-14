@@ -86,7 +86,13 @@ namespace Documents.Manager.Models.Models
         /// <summary>
         /// Initializes a new instance of the <see cref="T:Documents.Manager.Models.Models.Url"/> class.
         /// </summary>
-        
+        public Url(Guid id, string address, DateTime expiresAt, Guid fileId)
+        {
+            Id = id;
+            Address = address;
+            ExpiresAt = expiresAt;
+            FileId = fileId;
+        }
 
         #endregion
     }

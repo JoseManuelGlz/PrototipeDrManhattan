@@ -76,6 +76,15 @@ namespace Documents.Manager.Models.Models
         /// <summary>
         /// Initializes a new instance of the <see cref="T:Documents.Manager.Models.FileClassification"/> class.
         /// </summary>
+        /// <param name="id">the indentifier</param>
+        /// <param name="name">the name</param>
+        /// <param name="description">the description</param>
+        public FileClassification(Guid id, string name, string description)
+        {
+            Id = id;
+            Name = name;
+            Description = description;
+        }
 
         #endregion
     }

@@ -43,7 +43,7 @@ namespace Documents.Manager.Models.Models
         /// 
         /// </summary>
         /// <value></value>
-        public bool Status { get; set; }
+        public string Status { get; set; }
 
         /// <summary>
         /// Gets the files.
@@ -87,6 +87,14 @@ namespace Documents.Manager.Models.Models
         /// <summary>
         /// Initializes a new instance of the <see cref="T:Documents.Manager.Models.FileType"/> class.
         /// </summary>
+        public FileType(Guid id, string type, long minSize, long maxSize, string status)
+        {
+            Id = id;
+            Type = type;
+            MinSize = minSize;
+            MaxSize = maxSize;
+            Status = status;
+        }
 
         #endregion
     }

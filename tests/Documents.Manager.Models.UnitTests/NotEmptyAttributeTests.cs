@@ -10,6 +10,8 @@ namespace Documents.Manager.Models.UnitTests
     [Collection("Sequential")]
     public static class NotEmptyAttributeTests
     {
+        #region :: Methods ::
+
         /// <summary>
         /// 
         /// </summary>
@@ -51,5 +53,7 @@ namespace Documents.Manager.Models.UnitTests
 
             Assert.True(result);
         }
+
+        #endregion
     }
 }

@@ -18,7 +18,7 @@ namespace Documents.Manager.Models.Models
         /// Gets the identifier.
         /// </summary>
         /// <value>The identifier.</value>
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
         public Guid Id { get; private set; }
 
         /// <summary>
@@ -132,7 +132,7 @@ namespace Documents.Manager.Models.Models
         public DateTime? DeletedAt { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether this <see cref="T:Documents.Manager.Models.File"/> is deleted.
+        /// Gets or sets a value indicating whether this <see cref="T:Documents.Manager.Models.Models.File"/> is deleted.
         /// </summary>
         /// <value><c>true</c> if is deleted; otherwise, <c>false</c>.</value>
         public bool IsDeleted { get; set; }
@@ -142,14 +142,27 @@ namespace Documents.Manager.Models.Models
         #region :: Constructors ::
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Documents.Manager.Models.File"/> class.
+        /// Initializes a new instance of the <see cref="T:Documents.Manager.Models.Models.File"/> class.
         /// </summary>
         public File() { }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Documents.Manager.Models.File"/> class.
+        /// Initializes a new instance of the <see cref="T:Documents.Manager.Models.Models.File"/> class.
         /// </summary>
-        
+        public File(Guid id, Guid ownerId, Guid userId, string name, string etag, string version,
+            Guid fileTypeId, Guid processId, Guid fileClassificationId, Guid applicationId)
+        {
+            Id = id;
+            OwnerId = ownerId;
+            UserId = userId;
+            Name = name;
+            ETag = etag;
+            Version = version;
+            FileTypeId = fileTypeId;
+            ProcessId = processId;
+            FileClassificationId = fileClassificationId;
+            ApplicationId = applicationId;
+        }
 
         #endregion
     }

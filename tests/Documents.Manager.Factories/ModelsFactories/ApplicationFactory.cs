@@ -7,9 +7,21 @@ namespace Documents.Manager.Factories
     [ExcludeFromCodeCoverage]
     public static class ApplicationFactory
     {
-        public readonly static int MAX_LENGTH = 250;
-        public readonly static int MAX_LENGTH_DTO = 50;
+        #region :: Properties ::
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public readonly static int MAX_LENGTH = 250;
+
+        #endregion
+
+        #region :: Methods ::
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public static Application GetApplication()
         {
             var id = Guid.NewGuid();
@@ -19,11 +31,20 @@ namespace Documents.Manager.Factories
             return new Application();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public static Application GetApplicationEmpty()
         {
             return new Application();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public static Application GetApplicationWithId(Guid id)
         {
             var name = Utils.GetAlphaNumericString(MAX_LENGTH);
@@ -32,6 +53,11 @@ namespace Documents.Manager.Factories
             return new Application();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="length"></param>
+        /// <returns></returns>
         public static Application GetApplicationWithLength(int length)
         {
             var id = Guid.NewGuid();
@@ -40,5 +66,7 @@ namespace Documents.Manager.Factories
 
             return new Application();
         }
+
+        #endregion
     }
 }

@@ -69,16 +69,24 @@ namespace Documents.Manager.Models.Models
         #region :: Constructors ::
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Documents.Manager.Models.Application"/> class.
+        /// Initializes a new instance of the <see cref="T:Documents.Manager.Models.Models.Application"/> class.
         /// </summary>
         public Application()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Documents.Manager.Models.Application"/> class.
+        /// Initializes a new instance of the <see cref="T:Documents.Manager.Models.Models.Application"/> class.
         /// </summary>
-
+        /// <param name="id">the identifier</param>
+        /// <param name="name">the name</param>
+        /// <param name="description">the description</param>
+        public Application(Guid id,string name, string description)
+        {
+            Id = id;
+            Name = name;
+            Description = description;
+        }
 
         #endregion
     }

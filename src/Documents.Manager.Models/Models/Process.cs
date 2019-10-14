@@ -90,15 +90,23 @@ namespace Documents.Manager.Models.Models
         #region :: Constructors ::
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Documents.Manager.Models.Process"/> class.
+        /// Initializes a new instance of the <see cref="T:Documents.Manager.Models.Models.Process"/> class.
         /// </summary>
         public Process()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Documents.Manager.Models.Process"/> class.
+        /// Initializes a new instance of the <see cref="T:Documents.Manager.Models.Models.Process"/> class.
         /// </summary>
+        public Process(Guid id, string name, string description, string nameBucket, Guid processTypeId)
+        {
+            Id = id;
+            Name = name;
+            Description = description;
+            NameBucket = nameBucket;
+            ProcessTypeId = processTypeId;
+        }
 
         #endregion
     }

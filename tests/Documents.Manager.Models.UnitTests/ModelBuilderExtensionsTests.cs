@@ -8,6 +8,8 @@ namespace Documents.Manager.Models.UnitTests
     [Collection("Sequential")]
     public static class ModelBuilderExtensionsTests
     {
+        #region :: Methods ::
+
         /// <summary>
         /// 
         /// </summary>
@@ -17,5 +19,7 @@ namespace Documents.Manager.Models.UnitTests
             var value = ModelBuilderExtensions.ToSnakeCase(string.Empty);
             Assert.Equal(string.Empty, value);
         }
+
+        #endregion
     }
 }

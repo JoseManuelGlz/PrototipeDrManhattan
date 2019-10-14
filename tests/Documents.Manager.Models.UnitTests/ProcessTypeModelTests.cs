@@ -11,6 +11,8 @@ namespace Documents.Manager.Models.UnitTests
     [Collection("Sequential")]
     public static class ProcessTypeModelsTests
     {
+        #region :: Methods ::
+
         /// <summary>
         /// 
         /// </summary>
@@ -22,5 +24,7 @@ namespace Documents.Manager.Models.UnitTests
 
             Assert.True(result.Passed);
         }
+
+        #endregion
     }
 }
