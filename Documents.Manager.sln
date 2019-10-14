@@ -1,0 +1,52 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrototipeDrManhattan", "PrototipeDrManhattan\PrototipeDrManhattan.csproj", "{A2D55CF3-9B9D-4779-9E3B-51DFB8F45DDA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{95DAD3B2-B54E-487E-9EBD-CABEF615D668}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B7C71AEA-9F3C-4B62-A802-8E9B43635FB1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FA4D46D7-70ED-4389-9A8D-DEEF9506610F}"
+	ProjectSection(SolutionItems) = preProject
+		CHANGELOG.md = CHANGELOG.md
+		Dockerfile = Dockerfile
+		nuget.config = nuget.config
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Documents.Manager.Models", "src\Documents.Manager.Models\Documents.Manager.Models.csproj", "{F236B71C-0AF6-474E-9A4C-C68C35A70B3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Documents.Manager.Factories", "tests\Documents.Manager.Factories\Documents.Manager.Factories.csproj", "{4A019155-8AF8-48B2-9DCA-37B2F9B8C561}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Documents.Manager.Models.UnitTests", "tests\Documents.Manager.Models.UnitTests\Documents.Manager.Models.UnitTests.csproj", "{84F1867D-D0C4-49B8-BEEC-81F80E1B8F91}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2D55CF3-9B9D-4779-9E3B-51DFB8F45DDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2D55CF3-9B9D-4779-9E3B-51DFB8F45DDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2D55CF3-9B9D-4779-9E3B-51DFB8F45DDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2D55CF3-9B9D-4779-9E3B-51DFB8F45DDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F236B71C-0AF6-474E-9A4C-C68C35A70B3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F236B71C-0AF6-474E-9A4C-C68C35A70B3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F236B71C-0AF6-474E-9A4C-C68C35A70B3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F236B71C-0AF6-474E-9A4C-C68C35A70B3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A019155-8AF8-48B2-9DCA-37B2F9B8C561}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A019155-8AF8-48B2-9DCA-37B2F9B8C561}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A019155-8AF8-48B2-9DCA-37B2F9B8C561}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A019155-8AF8-48B2-9DCA-37B2F9B8C561}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84F1867D-D0C4-49B8-BEEC-81F80E1B8F91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84F1867D-D0C4-49B8-BEEC-81F80E1B8F91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84F1867D-D0C4-49B8-BEEC-81F80E1B8F91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84F1867D-D0C4-49B8-BEEC-81F80E1B8F91}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F236B71C-0AF6-474E-9A4C-C68C35A70B3F} = {95DAD3B2-B54E-487E-9EBD-CABEF615D668}
+		{4A019155-8AF8-48B2-9DCA-37B2F9B8C561} = {B7C71AEA-9F3C-4B62-A802-8E9B43635FB1}
+		{84F1867D-D0C4-49B8-BEEC-81F80E1B8F91} = {B7C71AEA-9F3C-4B62-A802-8E9B43635FB1}
+	EndGlobalSection
+EndGlobal
