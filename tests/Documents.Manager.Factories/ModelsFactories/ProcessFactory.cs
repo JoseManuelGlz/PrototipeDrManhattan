@@ -37,7 +37,7 @@ namespace Documents.Manager.Factories.ModelsFactories
         /// 
         /// </summary>
         /// <returns></returns>
-        public static Process GetProcess(Guid id)
+        public static Process GetProcessWithId(Guid id)
         {
             var name = Utils.GetAlphaNumericString(MAX_LENGTH);
             var description = Utils.GetAlphaNumericString(MAX_LENGTH);
@@ -51,7 +51,7 @@ namespace Documents.Manager.Factories.ModelsFactories
         /// 
         /// </summary>
         /// <returns></returns>
-        public static Process GetProcess(int length)
+        public static Process GetProcessWithLength(int length)
         {
             var id = Guid.NewGuid();
             var name = Utils.GetAlphaNumericString(length);

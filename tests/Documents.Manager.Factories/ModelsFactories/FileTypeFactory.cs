@@ -25,12 +25,14 @@ namespace Documents.Manager.Factories.ModelsFactories
         public static FileType GetFileType()
         {
             var id = Guid.NewGuid();
-            var type = Utils.GetAlphaNumericString(MAX_LENGTH);
+            var name = Utils.GetAlphaNumericString(MAX_LENGTH);
+            var mimeType = Utils.GetAlphaNumericString(MAX_LENGTH);
+            var extension = Utils.GetAlphaNumericString(MAX_LENGTH);
             var status = Utils.GetAlphaNumericString(MAX_LENGTH);
             var minSize = Utils.GetLong(1, 100000);
             var maxSize = Utils.GetLong(1, 100000);
 
-            return new FileType(id, type, minSize, maxSize, status);
+            return new FileType(id, name, mimeType, extension, minSize, maxSize, status);
         }
 
         /// <summary>
@@ -40,12 +42,14 @@ namespace Documents.Manager.Factories.ModelsFactories
         /// <returns></returns>
         public static FileType GetFileTypeWithId(Guid id)
         {
-            var type = Utils.GetAlphaNumericString(MAX_LENGTH);
+            var name = Utils.GetAlphaNumericString(MAX_LENGTH);
+            var mimeType = Utils.GetAlphaNumericString(MAX_LENGTH);
+            var extension = Utils.GetAlphaNumericString(MAX_LENGTH);
             var status = Utils.GetAlphaNumericString(MAX_LENGTH);
             var minSize = Utils.GetLong(1, 100000);
             var maxSize = Utils.GetLong(1, 100000);
 
-            return new FileType(id, type, minSize, maxSize, status);
+            return new FileType(id, name, mimeType, extension, minSize, maxSize, status);
         }
 
         /// <summary>
@@ -56,12 +60,14 @@ namespace Documents.Manager.Factories.ModelsFactories
         public static FileType GetFileTypeWithLength(int length)
         {
             var id = Guid.NewGuid();
-            var type = Utils.GetAlphaNumericString(length);
+            var name = Utils.GetAlphaNumericString(length);
+            var mimeType = Utils.GetAlphaNumericString(length);
+            var extension = Utils.GetAlphaNumericString(length);
             var status = Utils.GetAlphaNumericString(length);
             var minSize = Utils.GetLong(1, 100000);
             var maxSize = Utils.GetLong(1, 100000);
 
-            return new FileType(id, type, minSize, maxSize, status);
+            return new FileType(id, name, mimeType, extension, minSize, maxSize, status);
         }
 
         #endregion

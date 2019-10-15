@@ -1,4 +1,5 @@
-﻿using Documents.Manager.Factories;
+﻿using System;
+using Documents.Manager.Factories;
 using Documents.Manager.Factories.ModelsFactories;
 using Documents.Manager.Models.Models;
 using Xunit;
@@ -25,6 +26,29 @@ namespace Documents.Manager.Models.UnitTests
             Assert.True(res.Passed);
         }
 
+        /// <summary>
+        /// Should be ok
+        /// </summary>
+        [Fact]
+        public static void Should_Be_Fail_By_Length()
+        {
+            FileClassification external = FileClassificationFactory.GetFileClassificationWithLength(FileClassificationFactory.MAX_LENGTH +1);
+            var res = ModelValidation.GetValidationResults(external);
+
+            Assert.False(res.Passed);
+        }
+
+        /// <summary>
+        /// Should be ok
+        /// </summary>
+        [Fact]
+        public static void Should_Be_Ok_With_Id()
+        {
+            FileClassification external = FileClassificationFactory.GetFileClassificationWithId(Guid.NewGuid());
+            var res = ModelValidation.GetValidationResults(external);
+
+            Assert.True(res.Passed);
+        }
         #endregion
     }
 }

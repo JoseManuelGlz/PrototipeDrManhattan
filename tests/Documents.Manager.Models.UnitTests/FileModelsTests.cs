@@ -20,7 +20,7 @@ namespace Documents.Manager.Models.UnitTests
         [Fact]
         public static void Should_Be_Ok()
         {
-            File file = FileFactory.GetValid();
+            File file = FileFactory.GetFile();
             var response = ModelValidation.GetValidationResults(file);
 
             Assert.True(response.Passed);

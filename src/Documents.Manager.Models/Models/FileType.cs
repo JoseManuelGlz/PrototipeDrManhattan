@@ -25,7 +25,21 @@ namespace Documents.Manager.Models.Models
         /// </summary>
         /// <value>The name the file type.</value>
         [MaxLength(250)]
-        public string Type { get; private set; }
+        public string Name { get; private set; }
+
+        /// <summary>
+        /// Gets the name the file type
+        /// </summary>
+        /// <value>The mimeType the file type.</value>
+        [MaxLength(250)]
+        public string MimeType { get; private set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value>The extension the file type.</value>
+        [MaxLength(250)]
+        public string Extension { get; private set; }
 
         /// <summary>
         /// Gets the description the file type
@@ -87,10 +101,12 @@ namespace Documents.Manager.Models.Models
         /// <summary>
         /// Initializes a new instance of the <see cref="T:Documents.Manager.Models.FileType"/> class.
         /// </summary>
-        public FileType(Guid id, string type, long minSize, long maxSize, string status)
+        public FileType(Guid id, string name, string mimeType, string extension, long minSize, long maxSize, string status)
         {
             Id = id;
-            Type = type;
+            Name = name;
+            MimeType = mimeType;
+            Extension = extension;
             MinSize = minSize;
             MaxSize = maxSize;
             Status = status;
