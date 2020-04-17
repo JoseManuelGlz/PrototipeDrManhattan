@@ -12,12 +12,18 @@
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.3.100.1" />
-    <PackageReference Include="AWSSDK.S3" Version="3.3.104.33" />
+    <PackageReference Include="AWSSDK.S3" Version="3.3.104.42" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Services\" />
     <Folder Include="Model\" />
+    <Folder Include="RsaEncrypt\" />
+    <Folder Include="RsaEncrypt\Extensions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Services\CryptUtils.cs" />
+    <Compile Remove="Services\StringBuilderCache.cs" />
   </ItemGroup>
 </Project>
